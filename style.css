@@ -479,3 +479,16 @@ margin-bottom:15px;
     }
 
 }
+
+
+.redes-sociales{
+    text-align:center;
+    margin-top:30px;
+}
+
+.redes-sociales a{
+    text-decoration:none;
+    font-weight:bold;
+    color:#bc1888;
+    font-size:1.1rem;
+}
