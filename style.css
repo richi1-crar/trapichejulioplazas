@@ -961,18 +961,33 @@ html{
     box-shadow: 0 6px 18px rgba(139, 69, 19, 0.08);
     border: 1px solid rgba(212, 160, 23, 0.18);
 }
-.redes-sociales h3 { color: #703b14; margin-bottom: 12px; font-size: 1.15rem; }
+.redes-sociales h3 { 
+    color: #703b14; 
+    margin-bottom: 12px; 
+    font-size: 1.15rem; 
+}
+
 .redes-sociales a {
     text-decoration: none;
     font-size: 1.15rem;
     font-weight: 500;
+    
+    /* 👇 CORREGIDO: Degradado de Instagram seguro */
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    -webkit-background-clip: text;
-    color: transparent;
+    -webkit-background-clip: text; /* Para Chrome, Safari */
+    background-clip: text;          /* Para Firefox, Edge y navegadores nuevos */
+    color: transparent;            /* Hace que el texto tome el color del fondo */
+    
     transition: all 0.3s ease;
+    display: inline-block; /* ✅ Agregado para que la escala funcione mejor */
 }
-.redes-sociales a:hover { transform: scale(1.05); text-decoration: underline; }
 
+/* 👇 CORREGIDO: Efecto al pasar el mouse */
+.redes-sociales a:hover { 
+    transform: scale(1.05); 
+    text-decoration: underline; 
+    filter: brightness(1.2); /* ✅ Hace que brille más al pasar el mouse */
+}
 /* Mapa */
 .mapa-container {
     max-width: 900px;
@@ -1084,44 +1099,6 @@ html{
 }
 
 
-.mapa-container{
-    margin-top:40px;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-.botones-contacto{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btn-contacto{
-    display:inline-block;
-    padding:12px 20px;
-    text-align:center;
-    border-radius:50px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-}
-
-/* Celulares */
-@media(max-width:768px){
-
-    .botones-contacto{
-        flex-direction:column;
-        align-items:center;
-    }
-
-
-    .btn-contacto{
-        width:auto;
-        max-width:none;
-    }
-
-}
 
 
 .redes-sociales{
@@ -1129,9 +1106,3 @@ html{
     margin-top:30px;
 }
 
-.redes-sociales a{
-    text-decoration:none;
-    font-weight:bold;
-    color:#bc1888;
-    font-size:1.1rem;
-}
