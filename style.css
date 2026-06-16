@@ -235,194 +235,837 @@ text-align:center;
 html{
     scroll-behavior:smooth;
 }
-.historia{
-    max-width:900px;
-    margin:auto;
-    padding-top:60px;
+/* ==============================================
+   SECCIÓN HISTORIA - TRAPICHE JULIO PLAZAS
+   👉 DISEÑO DIFERENTE: COMPUTADOR vs CELULAR
+   ============================================== */
+
+/* 👇 DISEÑO PARA COMPUTADOR 👇 */
+.historia {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 60px;
+    /* Fondo con textura de papel muy suave */
+    background-color: #fff9eb;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    padding-bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 35px;
+    /* Borde decorativo tipo marco */
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #8b4513, #d4a017, #8b4513) 1;
+    /* Sombra general para que resalte del fondo de la página */
+    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.05), 
+                0 8px 30px rgba(0, 0, 0, 0.07);
+    position: relative;
 }
 
-.historia h1{
-    text-align:center;
-    color:#8b5a2b;
-    margin-bottom:15px;
-    font-size:2.8rem;
+/* TITULO PRINCIPAL */
+.historia h1 {
+    text-align: center;
+    color: #703b14;
+    margin-bottom: 15px;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
-.linea{
-    width:120px;
-    height:4px;
-    background:#d4a017;
-    margin:0 auto 40px;
-    border-radius:20px;
+/* SUBTITULO: TRAPICHE JULIO PLAZAS */
+.historia h1::after {
+    content: "Trapiche Julio Plazas";
+    display: block;
+    font-size: 1.4rem;
+    color: #b8860b;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
-.historia p{
-    font-size:1.1rem;
-    line-height:1.9;
-    margin-bottom:25px;
-    text-align:justify;
-    color:#444;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+/* LÍNEA DEBAJO DEL TÍTULO */
+.linea {
+    width: 160px;
+    height: 5px;
+    background: linear-gradient(90deg, #8b4513, #d4a017, #8b4513);
+    margin: 20px auto 50px;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(212, 160, 23, 0.3);
+    position: relative;
 }
 
-
-
-.linea{
-width:120px;
-height:4px;
-background:#d4a017;
-margin:15px auto 40px;
-border-radius:20px;
+/* ✨ Adorno en la línea */
+.linea::after {
+    content: '🌾';
+    position: absolute;
+    top: -12px;
+    right: -25px;
+    font-size: 22px;
+    background: #fff9eb;
+    padding: 0 5px;
 }
 
-.intro{
-max-width:900px;
-margin:auto;
-text-align:center;
-font-size:1.1rem;
-line-height:1.8;
-margin-bottom:40px;
+/* TEXTO INTRODUCTORIO */
+.intro {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1.9;
+    font-size: 1.25rem;
+    color: #5a3415;
+    font-weight: 500;
+    font-style: italic;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    border-left: 4px solid #d4a017;
+    border-right: 4px solid #d4a017;
 }
 
+/* PÁRRAFOS DE LA HISTORIA */
+.historia p {
+    font-size: 1.18rem;
+    line-height: 2;
+    margin-bottom: 30px;
+    text-align: justify;
+    color: #3b240f;
+    background-color: #fff8e6;
+    padding: 30px 35px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✅ ADORNO ESQUINA */
+.historia p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4a017 0%, transparent 70%);
+    opacity: 0.2;
+    border-bottom-right-radius: 20px;
+}
+
+/* ✨ ÍCONO AL INICIO DE CADA PÁRRAFO */
+.historia p:nth-child(3)::after { content: '🌱'; position: absolute; bottom: 15px; right: 20px; font-size: 20px; opacity: 0.15; }
+.historia p:nth-child(4)::after { content: '🌾'; position: absolute; bottom: 15px; right: 20px; font-size: 20px; opacity: 0.15; }
+.historia p:nth-child(5)::after { content: '👨👩👧👦'; position: absolute; bottom: 15px; right: 20px; font-size: 20px; opacity: 0.15; }
+
+/* EFECTO AL PASAR EL MOUSE */
+.historia p:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(139, 69, 19, 0.15);
+    background-color: #fff4d9;
+    border-color: rgba(212, 160, 23, 0.3);
+}
+
+/* ✨ SEPARADOR DECORATIVO ENTRE SECCIONES */
+.separador {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 24px;
+    color: #d4a017;
+    opacity: 0.6;
+}
+
+/* CAJAS DE BENEFICIOS Y PROCESO */
 .beneficios,
-.proceso{
-background:white;
-padding:30px;
-margin-top:40px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+.proceso {
+    background-color: #fff8e6;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+    transition: all 0.4s ease;
+    background-image: linear-gradient(rgba(255, 248, 230, 0.90), rgba(255, 248, 230, 0.90)), 
+                      url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    position: relative;
+    overflow: hidden;
 }
 
+/* Adorno lateral en cajas grandes */
+.beneficios::before, .proceso::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(180deg, #d4a017, #8b4513);
+}
+
+.beneficios:hover,
+.proceso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(139, 69, 19, 0.12);
+}
+
+/* TÍTULOS DE BENEFICIOS Y PROCESO */
 .beneficios h2,
-.proceso h2{
-color:#8b5a2b;
-margin-bottom:20px;
+.proceso h2 {
+    color: #703b14;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
 }
 
-.beneficios ul{
-margin-top:20px;
-padding-left:20px;
+.beneficios h2::before,
+.proceso h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 5px;
+    background: linear-gradient(180deg, #d4a017, #8b4513);
+    border-radius: 3px;
 }
 
-.beneficios li{
-margin-bottom:12px;
+/* LISTA DE BENEFICIOS */
+.beneficios ul {
+    margin-top: 22px;
+    padding-left: 10px;
+    list-style: none;
 }
 
-.proceso p{
-line-height:1.9;
-margin-bottom:15px;
+.beneficios li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 35px;
+    font-size: 1.1rem;
+    color: #4a2c14;
+    line-height: 1.7;
+}
+
+.beneficios li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #d4a017;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* TEXTO DE PROCESO */
+.proceso p {
+    line-height: 2;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #4a2c14;
+}
+
+/* ✨ FIRMA FINAL MEJORADA */
+.historia .firma {
+    text-align: right;
+    margin-top: 50px;
+    font-size: 1.3rem;
+    color: #703b14;
+    font-style: italic;
+    font-weight: 600;
+    padding-right: 25px;
+    font-family: 'Georgia', serif;
+    position: relative;
+}
+
+/* Línea decorativa antes de la firma */
+.historia .firma::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4a017);
 }
 
 
+/* ==============================================
+   📱 AQUÍ EMPIEZA EL DISEÑO PARA CELULAR 📱
+   ============================================== */
+@media (max-width: 768px) {
 
+    .historia {
+        margin: 20px 10px; /* Pequeño margen a los lados */
+        padding: 30px 18px 50px; /* Menos relleno interno */
+        border-radius: 20px; /* Bordes menos redondos para aprovechar espacio */
+    }
 
-.intro{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    margin-bottom:40px;
-    line-height:1.8;
+    /* Título más pequeño y adaptado */
+    .historia h1 {
+        font-size: 2.2rem;
+    }
+    .historia h1::after {
+        font-size: 1.1rem;
+        letter-spacing: 2px; /* Menos espacio entre letras */
+    }
+
+    /* Línea debajo del título */
+    .linea {
+        width: 120px;
+        height: 4px;
+        margin: 15px auto 30px;
+    }
+    .linea::after {
+        font-size: 18px;
+        top: -10px;
+        right: -20px;
+    }
+
+    /* Texto introductorio más compacto */
+    .intro {
+        font-size: 1.05rem;
+        padding: 18px 12px;
+        margin-bottom: 30px;
+    }
+
+    /* Párrafos: Más anchos, letra cómoda, buen espaciado */
+    .historia p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        padding: 22px 20px;
+        margin-bottom: 20px;
+        text-align: left; /* En celular se lee mejor alineado a la izquierda que justificado */
+    }
+
+    /* Íconos dentro de párrafos más pequeños */
+    .historia p:nth-child(3)::after,
+    .historia p:nth-child(4)::after,
+    .historia p:nth-child(5)::after {
+        font-size: 16px;
+        bottom: 10px;
+        right: 12px;
+    }
+
+    /* Cajas de Beneficios y Proceso */
+    .beneficios,
+    .proceso {
+        padding: 25px 20px;
+        margin-top: 25px;
+    }
+
+    .beneficios h2,
+    .proceso h2 {
+        font-size: 1.4rem;
+        padding-left: 12px;
+    }
+
+    .beneficios li {
+        font-size: 1rem;
+        padding-left: 25px;
+    }
+
+    /* Firma final más pequeña y centrada */
+    .historia .firma {
+        font-size: 1.1rem;
+        text-align: center;
+        padding-right: 0;
+        margin-top: 30px;
+    }
+    .historia .firma::before {
+        width: 100px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    /* Separador decorativo más pequeño */
+    .separador {
+        font-size: 18px;
+        margin: 30px 0;
+    }
+}
+/* ==============================================
+   GALERÍA - TRAPICHE JULIO PLAZAS
+   👉 DISEÑO DIFERENTE: COMPUTADOR vs CELULAR
+   ============================================== */
+
+/* 👇 DISEÑO PARA COMPUTADOR 👇 */
+.contenido {
+    max-width: 1200px; /* Más ancho en PC */
+    margin: 60px auto;
+    padding: 60px 30px 80px;
+    background-color: #fffbf2;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    border-radius: 35px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #8b4513, #d4a017, #8b4513) 1;
+    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.05), 
+                0 8px 30px rgba(0, 0, 0, 0.07);
 }
 
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+/* Título */
+.contenido h1 {
+    text-align: center;
+    color: #703b14;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
-.galeria img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:20px;
-    transition:0.4s;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+/* Línea decorativa */
+.contenido .linea {
+    width: 160px;
+    height: 5px;
+    background: linear-gradient(90deg, #8b4513, #d4a017, #8b4513);
+    margin: 20px auto 40px;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(212, 160, 23, 0.3);
+    position: relative;
+}
+.contenido .linea::after {
+    content: '📸';
+    position: absolute;
+    top: -12px;
+    right: -25px;
+    font-size: 22px;
+    background: #fffbf2;
+    padding: 0 5px;
 }
 
-.galeria img:hover{
-    transform:scale(1.05);
+/* Texto introductorio */
+.contenido .intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 1.2rem;
+    color: #5a3415;
+    font-weight: 500;
+    font-style: italic;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 25px;
+    border-left: 4px solid #d4a017;
+    border-right: 4px solid #d4a017;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.06);
 }
 
-.destacado{
-    margin-top:50px;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+/* 👉 EN COMPUTADOR: Fotos organizadas, varias por fila, tamaño mediano */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 25px;
+    padding: 10px 15px 50px;
 }
 
-.destacado h2{
-    color:#8b5a2b;
-    margin-bottom:15px;
+/* Estilo de cada imagen */
+.galeria img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover; /* Todas iguales, recorte perfecto */
+    border-radius: 22px;
+    background-color: #fff8e6;
+    padding: 8px;
+    box-shadow: 0 6px 18px rgba(139, 69, 19, 0.1);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adorno esquina igual que todo el sitio */
+.galeria img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #d4a017 0%, transparent 70%);
+    opacity: 0.25;
+    border-bottom-right-radius: 20px;
+    z-index: 2;
+}
+
+/* Efecto al pasar el mouse */
+.galeria img:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 15px 30px rgba(139, 69, 19, 0.15);
+    border-color: rgba(212, 160, 23, 0.4);
+    cursor: pointer;
+    filter: brightness(1.05);
+}
+
+/* Sección destacado */
+.destacado {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    background-color: #fff8e6;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+    background-image: linear-gradient(rgba(255, 248, 230, 0.90), rgba(255, 248, 230, 0.90)), 
+                      url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    position: relative;
+    overflow: hidden;
+}
+.destacado::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(180deg, #d4a017, #8b4513);
+}
+.destacado h2 {
+    color: #703b14;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+}
+.destacado p {
+    color: #4a2c14;
+    line-height: 1.9;
+    font-size: 1.1rem;
+    padding-left: 20px;
+    margin: 0;
+}
+/* Corrige el párrafo doble que tenías */
+.destacado p p {
+    display: none;
 }
 
 
+/* ==============================================
+   📱 AQUÍ EMPIEZA EL DISEÑO PARA CELULAR 📱
+   ============================================== */
+@media (max-width: 768px) {
 
-.contacto{
-    text-align:center;
+    .contenido {
+        margin: 20px 10px;
+        padding: 30px 15px 50px;
+        border-radius: 20px;
+    }
+
+    .contenido h1 {
+        font-size: 2.2rem; /* Título más pequeño */
+    }
+
+    .contenido .intro {
+        font-size: 1rem;
+        padding: 18px 12px;
+        margin-bottom: 30px;
+    }
+
+    /* 👉 EN CELULAR: Solo 2 fotos por fila, pero MÁS GRANDES */
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 5px 30px;
+    }
+
+    .galeria img {
+        height: 180px; /* Foto más alta y grande */
+        padding: 6px;
+        border-radius: 15px;
+    }
+
+    /* Sección destacado más compacta */
+    .destacado {
+        padding: 20px 15px;
+    }
+    .destacado h2 {
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+    .destacado p {
+        font-size: 0.95rem;
+        padding-left: 10px;
+    }
 }
 
-.contacto-card{
-    max-width:700px;
-    margin:40px auto;
-    background:white;
-    padding:35px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+/* ==============================================
+   📱 PANTALLAS MUY PEQUEÑAS (menos de 480px) 📱
+   ============================================== */
+@media (max-width: 480px) {
+    /* 👉 En celulares muy pequeños: SOLO 1 FOTO POR FILA, ocupa todo el ancho */
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+    .galeria img {
+        height: 250px; /* Foto ENORME, se ve con gran detalle */
+    }
 }
 
-.dato{
-    margin-bottom:25px;
+/* ==============================================
+   CONTACTO - TRAPICHE JULIO PLAZAS
+   👉 DISEÑO DIFERENTE: COMPUTADOR vs CELULAR
+   ============================================== */
+
+/* 👇 ESTE ES EL DISEÑO PRINCIPAL: PARA COMPUTADOR 👇 */
+.contenido.contacto {
+    max-width: 1100px; /* Más ancho en PC */
+    margin: 60px auto;
+    padding: 70px 40px 90px;
+    background-color: #fffbf2;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    border-radius: 35px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #8b4513, #d4a017, #8b4513) 1;
+    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.05), 
+                0 8px 30px rgba(0, 0, 0, 0.07);
+    text-align: center;
 }
 
-.dato h3{
-    color:#8b5a2b;
-    margin-bottom:8px;
+/* Título */
+.contenido.contacto h1 {
+    color: #703b14;
+    margin-bottom: 15px;
+    font-size: 3.2rem; /* Más grande en PC */
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
-.botones-contacto{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:30px;
+/* Línea decorativa */
+.contenido.contacto .linea {
+    width: 180px;
+    height: 5px;
+    background: linear-gradient(90deg, #8b4513, #d4a017, #8b4513);
+    margin: 20px auto 40px;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(212, 160, 23, 0.3);
+    position: relative;
+}
+.contenido.contacto .linea::after {
+    content: '📞';
+    position: absolute;
+    top: -12px;
+    right: -25px;
+    font-size: 22px;
+    background: #fffbf2;
+    padding: 0 5px;
 }
 
-.btn-contacto{
-    padding:15px 25px;
-    border-radius:50px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    transition:.3s;
+/* Texto introductorio */
+.contenido.contacto .intro {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.9;
+    font-size: 1.25rem;
+    color: #5a3415;
+    font-weight: 500;
+    font-style: italic;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 25px;
+    border-left: 4px solid #d4a017;
+    border-right: 4px solid #d4a017;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.06);
 }
 
-.btn-contacto:hover{
-    transform:translateY(-5px);
+/* 👉 EN COMPUTADOR: Tarjeta de datos y Botones en LÍNEA HORIZONTAL */
+.contenido-contacto-flex {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
 }
 
-.whatsapp{
-    background:#25D366;
+/* Tarjeta de datos */
+.contacto-card {
+    flex: 1;
+    min-width: 450px;
+    max-width: 550px;
+    background-color: #fff8e6;
+    padding: 40px 35px;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+    background-image: linear-gradient(rgba(255, 248, 230, 0.90), rgba(255, 248, 230, 0.90)), 
+                      url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    position: relative;
+    overflow: hidden;
+}
+.contacto-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(180deg, #d4a017, #8b4513);
 }
 
-.mapa{
-    background:#d4a017;
+.contacto-card .dato {
+    margin-bottom: 25px;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.15);
+    text-align: left;
+    padding-left: 20px;
+}
+.contacto-card .dato:last-child { border-bottom: none; margin-bottom: 0; }
+.contacto-card .dato h3 { color: #703b14; font-size: 1.2rem; margin-bottom: 8px; font-weight: 600; }
+.contacto-card .dato p { color: #4a2c14; font-size: 1.1rem; margin: 0; }
+
+/* Botones y Redes en PC */
+.botones-contacto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
 }
 
-.mensaje-final{
-    margin-top:40px;
-    padding:20px;
-    background:white;
-    border-radius:20px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    font-size:1.1rem;
+/* Botón WhatsApp */
+.btn-contacto.whatsapp {
+    display: inline-block;
+    padding: 18px 40px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+    border: 2px solid #1ebe5d;
+}
+.btn-contacto.whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+    background-color: #1ebe5d;
+}
+
+/* Instagram en PC */
+.redes-sociales {
+    background-color: #fff8e6;
+    padding: 25px 30px;
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+}
+.redes-sociales h3 { color: #703b14; margin-bottom: 12px; font-size: 1.15rem; }
+.redes-sociales a {
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 500;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+}
+.redes-sociales a:hover { transform: scale(1.05); text-decoration: underline; }
+
+/* Mapa */
+.mapa-container {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.12);
+    border: 2px solid rgba(212, 160, 23, 0.2);
+}
+.mapa-container iframe { width: 100%; display: block; height: 380px; }
+
+/* Mensaje final */
+.mensaje-final {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 22px 25px;
+    font-size: 1.15rem;
+    color: #703b14;
+    font-weight: 500;
+    font-style: italic;
+    background: rgba(255, 248, 230, 0.5);
+    border-radius: 20px;
+    border-top: 2px solid #d4a017;
+    border-bottom: 2px solid #d4a017;
+}
+
+
+/* ==============================================
+   📱 AQUÍ EMPIEZA EL DISEÑO PARA CELULAR 📱
+   (Se activa automáticamente cuando la pantalla es menor a 768px)
+   ============================================== */
+@media (max-width: 768px) {
+
+    .contenido.contacto {
+        max-width: 100%;
+        margin: 20px 10px;
+        padding: 30px 15px 50px;
+        border-radius: 20px;
+    }
+
+    .contenido.contacto h1 {
+        font-size: 2.2rem; /* Más pequeño en celular */
+    }
+
+    .contenido.contacto .intro {
+        font-size: 1rem;
+        padding: 18px 12px;
+        margin-bottom: 30px;
+    }
+
+    /* 👉 EN CELULAR: Todo se acomoda UNO DEBAJO DEL OTRO */
+    .contenido-contacto-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacto-card {
+        min-width: unset;
+        width: 100%;
+        padding: 25px 20px;
+    }
+    .contacto-card .dato {
+        text-align: center; /* Texto centrado en celular */
+        padding-left: 0;
+    }
+
+    .botones-contacto {
+        min-width: unset;
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* Botón MÁS GRANDE y ANCHO para tocar fácil */
+    .btn-contacto.whatsapp {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .redes-sociales {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mapa-container iframe {
+        height: 250px; /* Mapa más pequeño */
+    }
+
+    .mensaje-final {
+        font-size: 0.95rem;
+        padding: 15px 10px;
+    }
 }
 
 @media(max-width:768px){
